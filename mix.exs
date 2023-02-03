@@ -51,7 +51,8 @@ defmodule FoodTrucksMap.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:geo_postgis, "~> 3.4"}
+      {:geo_postgis, "~> 3.4"},
+      {:csv, "~> 2.3"}
     ]
   end
 
