@@ -10,6 +10,10 @@ import Config
 config :food_trucks_map,
   ecto_repos: [FoodTrucksMap.Repo]
 
+# Configures Geo types for Postgres
+config :food_trucks_map, FoodTrucksMap.Repo,
+  types: FoodTrucksMap.PostgresTypes
+
 # Configures the endpoint
 config :food_trucks_map, FoodTrucksMapWeb.Endpoint,
   url: [host: "localhost"],
