@@ -30,9 +30,9 @@ JSON API has two endpoints : one for the list of all food trucks and another end
   
 ## Dependencies: 
 
-PostgreSQL https://www.postgresql.org/download/
-PostGIS https://postgis.net/install/
-Elixir https://elixir-lang.org/install.html
+- PostgreSQL https://www.postgresql.org/download/
+- PostGIS https://postgis.net/install/
+- Elixir 1.14 https://elixir-lang.org/install.html
 
 
 To start your Phoenix server:
