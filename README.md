@@ -15,7 +15,11 @@ We filter out all records from the list that has status Requested or Expired, we
 Ideally, if we had more time, we would use background jobs to fetch an up-to-date list periodically and update information in the database. This particular open data directory has and API and Elixir client wrapper (https://github.com/socrata/exsoda). 
 
 ## JSON API
-JSON API has two endpoints : one for the list of all food trucks and another endpoint for showing information about specific food truck. Ideally, we would add pagination and provide a link of next page along the data of the current page. 
+JSON API has two endpoints : 
+- /api/food_trucks - is a list of all food trucks 
+- /api/food_trucks/#{food_truck_id} - information about specific food truck
+
+Ideally, we would add pagination and provide a link of next page along the data of the current page. 
 
 ## What would be nice to have
 
@@ -26,7 +30,6 @@ JSON API has two endpoints : one for the list of all food trucks and another end
 - Ability to extract food items into a searchable dataset. Although this information is unstructured, so it probavly would require manual curation. 
 - Add locations based on a schedule using additional dataset provided by datasf website https://data.sfgov.org/Economy-and-Community/Mobile-Food-Schedule/jjew-r69b . This will allow to provide more specific location for the trucks that move location based on a time of day.
 
-  
   
 ## Dependencies: 
 
@@ -40,4 +43,4 @@ To start your Phoenix server:
   * Run `mix setup` to install and setup dependencies
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:4000/api/food_trucks`](http://localhost:4000/api/food_trucks) from your browser.
