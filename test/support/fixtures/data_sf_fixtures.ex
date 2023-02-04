@@ -15,7 +15,10 @@ defmodule FoodTrucksMap.DataSFFixtures do
         company: "some company",
         food_items: "some food_items",
         location_id: 42,
-        type: "some type"
+        type: "some type",
+        geo_location: %Geo.Point{
+          coordinates: { -1.0, -1.0 }
+        }
       })
       |> FoodTrucksMap.DataSF.create_food_truck()
 

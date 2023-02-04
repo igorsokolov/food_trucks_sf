@@ -8,7 +8,7 @@ defmodule FoodTrucksMap.DataSFTest do
 
     import FoodTrucksMap.DataSFFixtures
 
-    @invalid_attrs %{address: nil, company: nil, food_items: nil, location_id: nil, type: nil}
+    @invalid_attrs %{address: nil, company: nil, food_items: nil, location_id: nil, type: nil, geo_location: nil}
 
     test "list_food_trucks/0 returns all food_trucks" do
       food_truck = food_truck_fixture()
@@ -21,7 +21,16 @@ defmodule FoodTrucksMap.DataSFTest do
     end
 
     test "create_food_truck/1 with valid data creates a food_truck" do
-      valid_attrs = %{address: "some address", company: "some company", food_items: "some food_items", location_id: 42, type: "some type"}
+      valid_attrs = %{
+        address: "some address",
+        company: "some company",
+        food_items: "some food_items",
+        location_id: 42,
+        type: "some type",
+        geo_location: %Geo.Point{
+          coordinates: { -1.0, -1.0 }
+        }
+      }
 
       assert {:ok, %FoodTruck{} = food_truck} = DataSF.create_food_truck(valid_attrs)
       assert food_truck.address == "some address"

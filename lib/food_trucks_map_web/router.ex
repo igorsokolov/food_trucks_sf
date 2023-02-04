@@ -12,6 +12,7 @@ defmodule FoodTrucksMapWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
   end
 
   scope "/", FoodTrucksMapWeb do
@@ -20,10 +21,13 @@ defmodule FoodTrucksMapWeb.Router do
     get "/", PageController, :home
   end
 
+
   # Other scopes may use custom stacks.
-  # scope "/api", FoodTrucksMapWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", FoodTrucksMapWeb do
+    pipe_through :api
+
+    resources "/food_trucks", FoodTruckController, except: [:new, :edit]
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:food_trucks_map, :dev_routes) do
