@@ -1,6 +1,6 @@
 # FoodTrucksMap
 
-This repo is a simple Phoenix application to provide API endpoints about of Food Trucks in San Francisco. It uses [`public list`] (https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) of Food Truck permits.
+This repo is a simple Phoenix application to provide API endpoints about of Food Trucks in San Francisco. It uses [`public list`](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) of Food Truck permits.
 
 Initially the idea was to create map of San Francisco with food trucks marked on it and LiveView updates when bounds of map was changed. But due to time constrains and lack of necessary front-end development experience this project become a simple JSON API.
 
